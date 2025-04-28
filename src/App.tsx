@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import ModelViewer from './components/IFCViewer';
 import TeamPage from './components/TeamPage';
+import SchedulePage from './components/SchedulePage';
 
 function App() {
   const [activeProject, setActiveProject] = useState('Проект Альфа');
@@ -32,6 +33,10 @@ function App() {
 
     if (activeTab === 'team') {
       return <TeamPage />;
+    }
+
+    if (activeTab === 'schedule') {
+      return <SchedulePage />;
     }
 
     return (
