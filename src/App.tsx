@@ -19,6 +19,7 @@ import {
   Box,
 } from 'lucide-react';
 import ModelViewer from './components/IFCViewer';
+import TeamPage from './components/TeamPage';
 
 function App() {
   const [activeProject, setActiveProject] = useState('Проект Альфа');
@@ -27,6 +28,10 @@ function App() {
   const renderContent = () => {
     if (activeTab === 'models') {
       return <ModelViewer />;
+    }
+
+    if (activeTab === 'team') {
+      return <TeamPage />;
     }
 
     return (
