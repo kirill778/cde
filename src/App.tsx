@@ -22,6 +22,7 @@ import ModelViewer from './components/IFCViewer';
 import TeamPage from './components/TeamPage';
 import SchedulePage from './components/SchedulePage';
 import DocumentsPage from './components/DocumentsPage';
+import SettingsPage from './components/SettingsPage';
 
 function App() {
   const [activeProject, setActiveProject] = useState('Проект Альфа');
@@ -42,6 +43,10 @@ function App() {
     
     if (activeTab === 'documents') {
       return <DocumentsPage />;
+    }
+    
+    if (activeTab === 'settings') {
+      return <SettingsPage />;
     }
 
     return (
