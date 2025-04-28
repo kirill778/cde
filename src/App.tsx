@@ -23,6 +23,7 @@ import TeamPage from './components/TeamPage';
 import SchedulePage from './components/SchedulePage';
 import DocumentsPage from './components/DocumentsPage';
 import SettingsPage from './components/SettingsPage';
+import SupportPage from './components/SupportPage';
 
 function App() {
   const [activeProject, setActiveProject] = useState('Проект Альфа');
@@ -47,6 +48,10 @@ function App() {
     
     if (activeTab === 'settings') {
       return <SettingsPage />;
+    }
+    
+    if (activeTab === 'support') {
+      return <SupportPage />;
     }
 
     return (
