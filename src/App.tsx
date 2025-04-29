@@ -176,7 +176,7 @@ function App() {
               <li key={item.id}>
                 <button
                   onClick={() => setActiveTab(item.id)}
-                  className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg text-sm ${
+                  className={`w-full flex items-center gap-1 px-4 py-2 rounded-lg text-sm ${
                     item.active
                       ? 'bg-white/10 text-white'
                       : 'text-gray-300 hover:bg-white/5'
