@@ -24,6 +24,7 @@ import SchedulePage from './components/SchedulePage';
 import DocumentsPage from './components/DocumentsPage';
 import SettingsPage from './components/SettingsPage';
 import SupportPage from './components/SupportPage';
+import ChatPage from './components/ChatPage';
 
 function App() {
   const [activeProject, setActiveProject] = useState('Проект Альфа');
@@ -52,6 +53,10 @@ function App() {
     
     if (activeTab === 'support') {
       return <SupportPage />;
+    }
+    
+    if (activeTab === 'chat') {
+      return <ChatPage />;
     }
 
     return (
@@ -164,6 +169,7 @@ function App() {
               { icon: FolderTree, text: 'Управление документами', id: 'documents', active: activeTab === 'documents' },
               { icon: Users, text: 'Команда', id: 'team', active: activeTab === 'team' },
               { icon: Calendar, text: 'Расписание', id: 'schedule', active: activeTab === 'schedule' },
+              { icon: MessageSquare, text: 'Чаты', id: 'chat', active: activeTab === 'chat' },
               { icon: Settings, text: 'Настройки', id: 'settings', active: activeTab === 'settings' },
               { icon: HelpCircle, text: 'Поддержка', id: 'support', active: activeTab === 'support' },
             ].map((item) => (
